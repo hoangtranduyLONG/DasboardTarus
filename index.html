@@ -2,698 +2,1005 @@
 <html>
 
 <head>
-    <title>Header</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <style>
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: white;
-            padding: 5px;
-            margin-top: -60px;
-        }
-
-        .header .search {
-            display: flex;
-            align-items: center;
-            padding: 5px;
-            background-color: white;
-            border-radius: 5px;
-            /* margin-right: 30px; */
-            margin-left: 400px;
-        }
-
-        .header .search input[type="text"] {
-            border: none;
-            outline: none;
-            padding: 5px;
+  <title>Header</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        }
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 5px;
+      margin-top: -60px;
+    }
 
-        .header .icons {
-            display: flex;
-            align-items: center;
-        }
+    .header .search {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      background-color: white;
+      border-radius: 5px;
+      /* margin-right: 30px; */
+      margin-left: 400px;
+    }
 
-        .header .icons img {
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-        }
-
-        .button2 {
-            background-color: #fff;
-            color: black;
-            margin-left: auto;
-            float: right;
-            border-radius: 10px;
-            margin: 60px 10px 60px 50px;
-            height: 20px;
-            font-size: 10px;
-            /* margin-right: ;         */
-        }
-
-        .dot {
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: red;
-            margin-bottom: 10px;
-        }
-
-        .silver-line {
-            border: none;
-            border-top: 0.5px solid silver;
-            margin: 30px 0;
-            margin-top: -70px;
-            margin-left: 380px;
-        }
-
-        .vertical-line {
-            position: fixed;
-            /* Đảm bảo đường kẻ dọc luôn hiển thị trên màn hình */
-            top: 0;
-            /* Vị trí đầu đường kẻ dọc */
-            left: 50%;
-            /* Vị trí ngang của đường kẻ dọc (ở giữa màn hình) */
-            height: 100%;
-            /* Chiều cao của đường kẻ dọc (đầy đủ chiều cao màn hình) */
-            border-left: 0.5px solid silver;
-            /* Đường kẻ dọc màu đen với độ rộng 1px */
-            margin-left: -370px;
-        }
-
-        .grid-container1 {
-            display: grid;
-
-            grid-template-columns: auto auto auto;
-            gap: 10px;
-            background-color: #ffff;
-            padding: 10px;
-            border-radius: 10px;
-            height: 200%;
-            margin-top: -30px;
-            margin-left: 400px;
-            width: 360px;
-        }
-
-        .grid-container1>div {
-            background-color: rgba(255, 255, 255, 0.4);
-            border: 1px solid black;
-            text-align: left;
-            font-size: 18px;
-            border-radius: 10px;
-            height: 150%;
-            /* margin-top: -40px; */
-            width: 360px;
-            ;
-        }
-
-        .grid-container2 {
-            display: grid;
-
-            grid-template-columns: auto auto;
-            gap: 10px;
-            background-color: #ffff;
-            padding: 10px;
-            border-radius: 10px;
-            height: 150%;
-            /* margin-top:10px; */
-            margin-top: -10px;
-            margin-left: 400px;
-            width: 545px;
-        }
-
-        .grid-container2>div {
-            background-color: rgba(255, 255, 255, 0.4);
-            border: 1px solid black;
-            text-align: left;
-            font-size: 18px;
-            border-radius: 10px;
-            height: 200%;
-            /* margin-top: -40px; */
-            width: 545px;
-            ;
-        }
-
-        .grid-container3 {
-            display: grid;
-
-            grid-template-columns: auto auto auto;
-            gap: 10px;
-            background-color: #ffff;
-            padding: 10px;
-            border-radius: 10px;
-           
-            margin-top: -10px;
-            margin-left: 400px;
-            width: 360px;
-        }
-
-        .grid-container3>div {
-            background-color: rgba(255, 255, 255, 0.4);
-            border: 1px solid black;
-            text-align: left;
-            font-size: 18px;
-            border-radius: 10px;
-            height: 200%;
-            /* margin-top: -40px; */
-            width: 360px;
-            height: 320px;
-            ;
-        }
+    .header .search input[type="text"] {
+      border: none;
+      outline: none;
+      padding: 5px;
 
 
+    }
 
-        .container {
-            display: flex;
-            align-items: flex-start;
-        }
+    .header .icons {
+      display: flex;
+      align-items: center;
+    }
 
-        h1,
-        img {
-            margin: 0;
-        }
+    .header .icons img {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
 
-        .container1 {
-            display: flex;
-            align-items: center;
-           
-        }
+    .button2 {
+      background-color: #fff;
+      color: black;
+      margin-left: auto;
+      float: right;
+      border-radius: 10px;
+      margin: 60px 10px 60px 50px;
+      height: 20px;
+      font-size: 10px;
+      /* margin-right: ;         */
+    }
+
+    .dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: red;
+      margin-bottom: 10px;
+    }
+
+    .silver-line {
+      border: none;
+      border-top: 0.5px solid silver;
+      margin: 30px 0;
+      margin-top: -70px;
+      margin-left: 405px;
+    }
+
+    .vertical-line {
+      position: fixed;
+      /* Đảm bảo đường kẻ dọc luôn hiển thị trên màn hình */
+      top: 0;
+      /* Vị trí đầu đường kẻ dọc */
+      left: 50%;
+      /* Vị trí ngang của đường kẻ dọc (ở giữa màn hình) */
+      height: 100%;
+      /* Chiều cao của đường kẻ dọc (đầy đủ chiều cao màn hình) */
+      border-left: 0.5px solid silver;
+      /* Đường kẻ dọc màu đen với độ rộng 1px */
+      margin-left: -362px;
+
+    }
+
+    .grid-container1 {
+      display: grid;
+
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+      background-color: #ffff;
+      padding: 10px;
+      border-radius: 10px;
+      height: 200%;
+      margin-top: -30px;
+      margin-left: 400px;
+      width: 360px;
+    }
+
+    .grid-container1>div {
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid black;
+      text-align: left;
+      font-size: 18px;
+      border-radius: 10px;
+      height: 150%;
+      /* margin-top: -40px; */
+      width: 360px;
+      ;
+    }
+
+    .grid-container2 {
+      display: grid;
+
+      grid-template-columns: auto auto;
+      gap: 10px;
+      background-color: #ffff;
+      padding: 10px;
+      border-radius: 10px;
+      height: 150%;
+      /* margin-top:10px; */
+      margin-top: -10px;
+      margin-left: 400px;
+      width: 545px;
+    }
+
+    .grid-container2>div {
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid black;
+      text-align: left;
+      font-size: 18px;
+      border-radius: 10px;
+      height: 200%;
+      /* margin-top: -40px; */
+      width: 545px;
+      ;
+    }
+
+    .grid-container3 {
+      display: grid;
+
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+      background-color: #ffff;
+      padding: 10px;
+      border-radius: 10px;
+
+      margin-top: -10px;
+      margin-left: 400px;
+      width: 360px;
+    }
+
+    .grid-container3>div {
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid black;
+      text-align: left;
+      font-size: 18px;
+      border-radius: 10px;
+      height: 200%;
+      /* margin-top: -40px; */
+      width: 360px;
+      height: 320px;
+      ;
+    }
 
 
-        button,
-        p {
-            margin: 0;
-            margin-left: 10px;
-        }
 
-        .container2 {
-            display: flex;
-            align-items: center;
-        }
+    .container {
+      display: flex;
+      align-items: flex-start;
+    }
 
-        button,
-        p {
-            margin: 0;
-            margin-left: 10px;
-            border-radius: 10px;
-        }
+    h1,
+    img {
+      margin: 0;
+    }
 
-        .grid-container4 {
+    .container1 {
+      display: flex;
+      align-items: center;
+
+    }
+
+
+    button,
+    p {
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    .container2 {
+      display: flex;
+      align-items: center;
+    }
+
+    button,
+    p {
+      margin: 0;
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+
+    /* .grid-container4 {
             display: grid;
             grid-template-columns: auto;
            gap: 10px;
-            /* margin-top: -800px; */
+           
             padding: 10px;
             width: 50px;
             height: 600px;
             margin-left: 160px;
-            /* border-radius: 50px; */
+            
             margin-top: -890px;
         }
-
-        .grid-container4>div {
+/*  */
+    /* .grid-container4>div {
             background-color: rgba(255, 255, 255, 0.8);
             border: 1px solid black;
             text-align: center;
             font-size: 30px;
             border-radius: 10px;
-           
-        }
+            margin-left:-300px ;
+        }  */
 
-        .grid-container5 {
-            display: grid;
-            grid-template-columns: auto;
-            gap: 10px;
-            margin-top: -620px;
-            padding: 10px;
-            width: 130px;
-            height: 600px;
-            margin-left: 255px;
-            /* border-radius: 50px; */
-        }
+    .grid-container5 {
+      display: grid;
+      /* grid-template-columns: auto; */
+      gap: 10px;
+      margin-top: -620px;
+      padding: 30px;
+      width: 40px;
+      height: 600px;
+      grid-gap: 10px;
+      /* border-radius: 50px; */
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: -30px;
+    }
 
-        .grid-container5>div {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid black;
-            text-align: center;
-            font-size: 30px;
+    .grid-container5>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid black;
+      text-align: center;
+      font-size: 30px;
 
-        }
-        .opacity1{
+    }
+
+
+    .opacity1 {
       opacity: 0.5;
-    font-size: 10px;
-   /* margin-left: 50px; */
-   /* margin-top: 20px; */
-    /* margin-bottom: -80px; */
+      font-size: 10px;
+      /* margin-left: 50px; */
+      /* margin-top: 20px; */
+      /* margin-bottom: -80px; */
     }
 
     .chart-container {
-    position: absolute;
-    right: 40px;
-    top: 300px;
-    outline: none;
-    /* Các thuộc tính khác bạn muốn áp dụng cho phần tử chứa biểu đồ */
-  }
-  /* .fe1{
+      position: absolute;
+      right: 40px;
+      top: 300px;
+      outline: none;
+      /* Các thuộc tính khác bạn muốn áp dụng cho phần tử chứa biểu đồ */
+    }
+
+    /* .fe1{
     border-radius: 20px;
   } */
-  .containerP{
-    display: flex; /* Sử dụng flexbox */
-   /* Căn giữa theo chiều dọc */
-  }
-  .fe2{
-    margin-top: -40px;
-    width: 25px;
-  height: 20px;
-  }
-  
-  .containerP h1 {
-    margin-right: 180px; /* Khoảng cách giữa h1 và img */
-  }
-  .containerP img{
+    .containerP {
+      display: flex;
+      /* Sử dụng flexbox */
+      /* Căn giữa theo chiều dọc */
+    }
 
-    margin-left:30px ;
-  }
-  .fe1{
-  border-radius: 20%;  
-  margin-left: 10px;
-  width: 25px;
-  height: 20px;
-  
-  
-  }
-  .image{
-    margin-top: -25px;
-  }
-  .vl {
-  border-left: 0.5px solid silver;
-  height: 20px;
-  margin-left: 160px;
-  margin-top: -20px;
-}
+    .fe2 {
+      margin-top: -40px;
+      width: 25px;
+      height: 20px;
+    }
 
-.v1{
-    margin-top: -65px;
-    margin-left: -180px;
-}
-.chart{
-    margin-top: -195px;
-    margin-left: 210px;
-}
+    .containerP h1 {
+      margin-right: 180px;
+      /* Khoảng cách giữa h1 và img */
+    }
 
-.grid-container6 {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 10px;
-  background-color: #fff;
-  padding: 10px;
-  width:530px ;
-  height:75px ;
-  margin-top: -20px;
-}
+    .containerP img {
 
-.grid-container6 > div {
-border-radius: 10px;
-  border: 1px solid black;
-  text-align: center;
-  font-size: 30px;
-}
+      margin-left: 30px;
+    }
 
-#chart-container1 {
-  width: 500px;
-  height: 100px;
-  position: relative;
-}
+    .fe1 {
+      border-radius: 20%;
+      margin-left: 10px;
+      width: 25px;
+      height: 20px;
 
 
+    }
+
+    .image {
+      margin-top: -25px;
+    }
+
+    .vl {
+      border-left: 0.5px solid silver;
+      height: 20px;
+      margin-left: 160px;
+      margin-top: -20px;
+    }
+
+    .v1 {
+      margin-top: -65px;
+      margin-left: -180px;
+    }
+
+    .chart {
+      margin-top: -195px;
+      margin-left: 210px;
+    }
+
+    .grid-container6 {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 10px;
+      background-color: #fff;
+      padding: 10px;
+      width: 530px;
+      height: 75px;
+      margin-top: -20px;
+    }
+
+    .grid-container6>div {
+      border-radius: 10px;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    #chart-container1 {
+      width: 500px;
+      height: 100px;
+      position: relative;
+    }
+
+
+    .sidenav {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      padding-top: 20px;
+      text-decoration: none;
+    }
+
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a,
+    .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+      color: #f1f1f1;
+    }
+
+    /* Main content */
+
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      background-color: #fff;
+      color: white;
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+      display: block;
+      background-color: #fff;
+      /* padding-left: 8px; */
+      width: 100px;
+
+      margin-left: 258px;
+      margin-top: -292px;
+height: 600px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    /* Some media queries for responsiveness */
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
   </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="script.js"></script>
 <body>
-    <div class="header">
-        <div class="search">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="icons">
-            <button class="button2">
-                En v
-            </button>
-            <!-- <i class="fas fa-sun" style="margin-left: 5px;padding-right: 20px;"></i> -->
-            <img src="img\z4754910954514_cebc437e49a2a860d220e5cffb2e2241.jpg"
-                style="margin-left: 5px;padding-right: 20px;">
-            <i class="fas fa-bell bell-icon" style="color:silver; "><span class="dot"></span></i>
-        </div>
+  <div class="header">
+    <div class="search">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search...">
     </div>
-    <br>
-    <hr class="silver-line">
-
-    <div class="grid-container1">
-
-
-        <div style="background-color:#7655FA;width: 450px;height: 200px;">
-            <div class="container">
-                <h1 style="color: white;font-size: 20px;margin-left:10px;margin-top: 12px;">Website Analytics</h1>
-
-                <img src="img\z4755452969992_040730154413533255e2e661a7913b52.jpg"
-                    style="margin-top:15px;margin-left:240px;">
-
-            </div>
-
-            <h2 style="color: #fff;font-size: 10px;margin-top: 0px;margin-left:10px;opacity: 0.6;">Total 28.5% Convention Rate</h2>
-            <h3 style="color: white;font-size: 10px;margin-left: 10px;margin-top: 20px;opacity: 0.8;">Spending</h3>
-            <div class="container1">
-                <div class="fe2" style="background-color: #6141E4;color: #fff;font-size: 12px;margin-top: 0px;margin-left: 10px;">
-                    <p style="margin-top: 3px;margin-left: 6px;">12h</p>
-                    </div>
-                <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Spend</p>
-                <div class="fe2" style="background-color: #6141E4;color: #fff;opacity: 0.8;font-size: 12px;margin-top: 0px;margin-left: 10px;">
-                    <p style="margin-top: 3px;margin-left: 6px;">18</p>
-                    </div>
-                <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Order size</p>
-            </div>
-            <br>
-            <div class="container2">
-                <div class="fe1" style="background-color: #6141E4;color: #fff;font-size: 12px;">
-                    <p style="margin-top: 3px;margin-left: 6px;">127</p>
-                    </div>
-                <p style="color: #fff;font-size:12px;opacity: 0.8;margin-left: 5px;">Order</p>
-                <div class="fe1" style="background-color: #6141E4;color: #fff;opacity: 0.8;font-size: 12px;">
-                    <p style="margin-top: 3px;margin-left: 4px;">2.3k</p>
-                    </div>
-                <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Items</p>
-                <img src="img\z4755613818762_7d025b10ba39bcee317e713794491f87.jpg"
-                    style="margin-left:80px;margin-top:-70px;">
-            </div>
-
-        </div>
-
-
-
-
-        <div style="width: 320px;height: 200px;">
-            
-            <h1 style="color: black;margin-left:20px;margin-top:20px;font-size: 16px;opacity: 0.5;">Sales Overview<h6 style="margin-top: -15px;margin-left:260px;color: #77B788;">+18.2%</h6></h1>
-       <h1 style="margin-top: -25px;margin-left: 20px;font-size: 24px;opacity: 0.6;">$42.5k</h1>
-       <br>
-       <img src="img\z4760936787576_5c45afab26347a1b66a13b47369c2245.jpg"style="height: 30px;width: 30px;margin-left:15px;">
-       <p style="margin-left: 50px;margin-top: -30px;">Orders</p>                            
-       </p>
-       
-<div class="image"><img src="img\z4760937602321_3031f44d688b28ced6dcaf6eaac8da3d.jpg"style="height: 30px;width: 30px;margin-left:270px;"></div>
-       <p style="margin-left: 220px;margin-top: -30px;">Visits</p>                            
-       </p>
-       
-       <div class="vl"></div>
-<img src="img\z4761091397734_a51218e8e456e7ce96c0438faa32b9d5.jpg" style="margin-left: 154px;">
-<h1 style="font-size: 18px;margin-top: -15px;margin-left: 15px;">62.2%</h1>
-<h6  style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">6,440</h6>
-
-<h1 style="font-size: 18px;margin-top: -60px;margin-left: 250px;">25.5%</h1>
-<h6  style="margin-top: 0px;margin-left: 250px;opacity: 0.5;">12,749</h6>
-
-
-<div id="chart-container1" >
-    <div id="blue-line"></div>
-    <div id="red-line"></div>
+    <div class="icons">
+      <button class="button2">
+        En v
+      </button>
+      <!-- <i class="fas fa-sun" style="margin-left: 5px;padding-right: 20px;"></i> -->
+      <img src="img\z4754910954514_cebc437e49a2a860d220e5cffb2e2241.jpg" style="margin-left: 5px;padding-right: 20px;">
+      <i class="fas fa-bell bell-icon" style="color:silver; "><span class="dot"></span></i>
+    </div>
   </div>
+  <br>
+  <hr class="silver-line">
+
+  <div class="grid-container1">
 
 
+    <div style="background-color:#7655FA;width: 450px;height: 200px;">
+      <div class="container">
+        <h1 style="color: white;font-size: 20px;margin-left:10px;margin-top: 12px;">Website Analytics</h1>
+
+        <img src="img\z4755452969992_040730154413533255e2e661a7913b52.jpg" style="margin-top:15px;margin-left:240px;">
+
+      </div>
+
+      <h2 style="color: #fff;font-size: 10px;margin-top: 0px;margin-left:10px;opacity: 0.6;">Total 28.5% Convention Rate
+      </h2>
+      <h3 style="color: white;font-size: 10px;margin-left: 10px;margin-top: 20px;opacity: 0.8;">Spending</h3>
+      <div class="container1">
+        <div class="fe2"
+          style="background-color: #6141E4;color: #fff;font-size: 12px;margin-top: 0px;margin-left: 10px;">
+          <p style="margin-top: 3px;margin-left: 6px;">12h</p>
         </div>
-        <div style="width: 320px;height: 200px;">
-            <div class="flex">
-                <img src="img\z4757945996545_f708534625b602e275691a033c56d3ba.jpg" style="width: 40px;height:40px;margin-top: 10px;margin-left:20px ; " >
-              
-        
-                <p class="text1" style="margin-top: 0px;margin-left: 30px;font-weight: bold;">
-                  
-                  97.5k</p>
-                
-               </div>
-               <img src="img\z4758078369912_305f4f9646dde92513ab8d672bc5d1a1.jpg"style="width: 318px;height:118px;margin-left:0px;" >
-               <div class="v1">
-                <img src="img\z4761155480628_f89e9e34a0d89e099eb2c91db48e84d8.jpg"style="width: 25px;height: 25px" ; >
-               </div>
-               
-               
-               
-              
-<!--               
+        <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Spend</p>
+        <div class="fe2"
+          style="background-color: #6141E4;color: #fff;opacity: 0.8;font-size: 12px;margin-top: 0px;margin-left: 10px;">
+          <p style="margin-top: 3px;margin-left: 6px;">18</p>
+        </div>
+        <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Order size</p>
+      </div>
+      <br>
+      <div class="container2">
+        <div class="fe1" style="background-color: #6141E4;color: #fff;font-size: 12px;">
+          <p style="margin-top: 3px;margin-left: 6px;">127</p>
+        </div>
+        <p style="color: #fff;font-size:12px;opacity: 0.8;margin-left: 5px;">Order</p>
+        <div class="fe1" style="background-color: #6141E4;color: #fff;opacity: 0.8;font-size: 12px;">
+          <p style="margin-top: 3px;margin-left: 4px;">2.3k</p>
+        </div>
+        <p style="color: #fff;font-size: 12px;opacity: 0.8;margin-left: 5px;">Items</p>
+        <img src="img\z4755613818762_7d025b10ba39bcee317e713794491f87.jpg" style="margin-left:80px;margin-top:-70px;">
+      </div>
+
+    </div>
+
+
+
+
+    <div style="width: 320px;height: 200px;">
+
+      <h1 style="color: black;margin-left:20px;margin-top:20px;font-size: 16px;opacity: 0.5;">Sales Overview<h6
+          style="margin-top: -15px;margin-left:260px;color: #77B788;">+18.2%</h6>
+      </h1>
+      <h1 style="margin-top: -25px;margin-left: 20px;font-size: 24px;opacity: 0.6;">$42.5k</h1>
+      <br>
+      <img src="img\z4760936787576_5c45afab26347a1b66a13b47369c2245.jpg"
+        style="height: 30px;width: 30px;margin-left:15px;">
+      <p style="margin-left: 50px;margin-top: -30px;">Orders</p>
+      </p>
+
+      <div class="image"><img src="img\z4760937602321_3031f44d688b28ced6dcaf6eaac8da3d.jpg"
+          style="height: 30px;width: 30px;margin-left:270px;"></div>
+      <p style="margin-left: 220px;margin-top: -30px;">Visits</p>
+      </p>
+
+      <div class="vl"></div>
+      <img src="img\z4761091397734_a51218e8e456e7ce96c0438faa32b9d5.jpg" style="margin-left: 154px;">
+      <h1 style="font-size: 18px;margin-top: -15px;margin-left: 15px;">62.2%</h1>
+      <h6 style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">6,440</h6>
+
+      <h1 style="font-size: 18px;margin-top: -60px;margin-left: 250px;">25.5%</h1>
+      <h6 style="margin-top: 0px;margin-left: 250px;opacity: 0.5;">12,749</h6>
+
+
+      <div id="chart-container1">
+        <div id="blue-line"></div>
+        <div id="red-line"></div>
+      </div>
+
+
+    </div>
+    <div style="width: 320px;height: 200px;">
+      <div class="flex">
+        <img src="img\z4757945996545_f708534625b602e275691a033c56d3ba.jpg"
+          style="width: 40px;height:40px;margin-top: 10px;margin-left:20px ; ">
+
+
+        <p class="text1" style="margin-top: 0px;margin-left: 30px;font-weight: bold;">
+
+          97.5k</p>
+
+      </div>
+      <img src="img\z4758078369912_305f4f9646dde92513ab8d672bc5d1a1.jpg"
+        style="width: 318px;height:118px;margin-left:0px;">
+      <div class="v1">
+        <img src="img\z4761155480628_f89e9e34a0d89e099eb2c91db48e84d8.jpg" style="width: 25px;height: 25px" ;>
+      </div>
+
+
+
+
+      <!--               
                <div id="chart-container">
                 <div id="blue-line"></div>
                 <div id="red-line"></div>
               </div> -->
-              
-              <input type="range" min="0" max="100" value="76" id="percentage-input" style="margin-left: -320px; width: 85%;height:2px;">
-        
-        </div>
+
+      <input type="range" min="0" max="100" value="76" id="percentage-input"
+        style="margin-left: -320px; width: 85%;height:2px;">
 
     </div>
 
+  </div>
 
-    
-        <div class="grid-container2" >
 
-            <div style="width:550px ;height: 270px;">
-                <h1 style="font-size: 14px;margin-top: 10px;margin-left: 15px;">Earning Reports  </h1>
-                <h6 style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">Weekly Earning Overview</h6> 
-                
-                
-                <br>
-                <br>
-                <h1 style="color: black;margin-left:20px;margin-top:-25px;">$468
-                <div style="margin-top: -25px;margin-left:80px;color: #77B788;border-radius: 10%;width: 30px;
+
+  <div class="grid-container2">
+
+    <div style="width:550px ;height: 270px;">
+      <h1 style="font-size: 14px;margin-top: 10px;margin-left: 15px;">Earning Reports </h1>
+      <h6 style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">Weekly Earning Overview</h6>
+
+
+      <br>
+      <br>
+      <h1 style="color: black;margin-left:20px;margin-top:-25px;">$468
+        <div style="margin-top: -25px;margin-left:80px;color: #77B788;border-radius: 10%;width: 30px;
                     height: 15px;background-color:#CCDAD2 ;">
-                  <h1 style="margin-left: 1px;font-size: 10px;margin-top: -20px;">+4.2%</h1>  </div></h1>
-            <h6 style="opacity: 0.5;margin-left: 20px;margin-top: 20px;">You informed of this week</h6>
-            <h6 style="opacity: 0.5;margin-left: 20px;margin-top: -25px;">compared to last week</h6>
-            <div class="chart">
-                <img src="img\z4761406135580_a888d6ff1ec90b33105255ea5ac4e07e.jpg" style="width: 330px;height: 160px;">
-            </div>
-            <br>
-
-            <div class="grid-container6">
-                <div>
-                    <img src="img\z4761717842377_9fce8f7727c50685ee37af4d2870fd99.jpg" style="width:520px ;height: 75px;margin-top: 5px;">
-                    
-                </div>
-                <input type="range" min="0" max="100" value="72"  style="width: 15%;margin-top:-20px;margin-left: 10px;height: 2px;">
-              
-                <input type="range" min="0" max="100" value="45" id="percentage-input2" style="width: 15%;margin-top:-30px;margin-left: 200px;height: 2px;">
-                <input type="range" min="0" max="100" value="82" id="percentage-input3" style="width: 15%;margin-top:-40px;margin-left: 400px;height: 2px;">
-            </div>
-              
-            
-
-            </div>
-            <div style="width:550px ;height: 270px;">
-                <h1 style="font-size: 14px;margin-top: 10px;margin-left: 15px;">Support Tracker </h1>
-                <h6 style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">Last 7 days</h6>
-                <h1 style="font-size: 22px;margin-top: -10px;margin-left: 15px;">164</h1>
-                <h6 style="margin-top: 10px;margin-left: 15px;opacity: 0.5;">Total Tickets</h6>
-
-                <img src="img\z4757670774371_37846ba15a00a151ec1440f903193dae.jpg"style="height: 40px;width: 40px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">142 Tickets</p>                            
-       </p>
-       <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >New Tickets</span></p>
-
-       <img src="img\z4757724620241_0bf41f23f22af94782e7d6a09ddaa954.jpg"style="height: 40px;width: 40px;margin-left:15px"><p style="margin-left: 60px;margin-top: -40px;">28 Tickets</p>                            
-    </p >
-    <p style="margin-top: -5px;margin-left: 62px;"> <span class="opacity1" >Open Tickets</span></p>
- 
-
-
-<img src="img\z4757725492995_46873b1e8cc7000a0b51e51dc7a711b2.jpg"style="height: 40px;width: 40px;margin-left:15px"><p style="margin-left: 60px;margin-top: -40px;">1 Day</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Response time</span></p>
-<div style="margin-top: -140px;margin-left: 270px;">
-
-    <h1 style="font-size: 10px;margin-left: 5px;opacity: 0.5;">Completed Tasks</h1>
-    <h1 style="font-size: 20px;margin-left: 25px;">85%</h1>
-</div>
-
-            </div>
-              
-   
-            <span  class="chart-container">   <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
-
-                <script style="margin-top: 50px;">
-                var xValues = ["Italy", "France", "Spain"];
-                
-                 var yValues = [142, 16, 6];
-                
-                // var yValues = [40, 30, 30];
-                var barColors = [
-                  "#7856FF",
-                  "#D8D8E5",
-                  "#ffff",
-                 
-                ];
-                
-                new Chart("myChart", {
-                  type: "doughnut",
-                  data: {
-                    
-                    datasets: [{
-                      backgroundColor: barColors,
-                      data: yValues
-                    }]
-                  },
-                  
-                });
-                </script></span>
-         
+          <h1 style="margin-left: 1px;font-size: 10px;margin-top: -20px;">+4.2%</h1>
         </div>
+      </h1>
+      <h6 style="opacity: 0.5;margin-left: 20px;margin-top: 20px;">You informed of this week</h6>
+      <h6 style="opacity: 0.5;margin-left: 20px;margin-top: -25px;">compared to last week</h6>
+      <div class="chart">
+        <img src="img\z4761406135580_a888d6ff1ec90b33105255ea5ac4e07e.jpg" style="width: 330px;height: 160px;">
+      </div>
+      <br>
 
-
-
-
-    <div class="grid-container3">
-
+      <div class="grid-container6">
         <div>
-            <div class="containerP">
-                <h1 style="color: black;font-size: 13px;margin-left:20px;margin-top: 15px;">Sales by Countries
-                    
-                
-                </h1>
-                <img src="img\z4758665980715_e7f308c7cdb96fbbbc21276409c2f62e.jpg"
-               style="margin-top: 15px;" >
-              </div>
-           
-            <br>
-
-          
-            <h2 style="color: black;font-size: 10px;margin-top: -20px;margin-left:20px;opacity: 0.6;">Total 28.5% Convention Rate</h2>
-            <img src="img\z4758757854481_fdc74564e5d33a82885f7fd69b7c0897.jpg"style="height: 30px;width: 30px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">$8,567k</p>                            
-        </p>
-        <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >United State</span></p>
-        <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: #77B788;">25.8%
-          
-        </p>
-        <br>
-        <img src="img\z4758758538120_c7a99228dbeaf2d140e4a2ddca2aece3.jpg"style="height: 30px;width: 30px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">$2,415k</p>                            
-    </p>
-    <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Brazil</span></p>
-    <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: red;">6.2%
-      
-    </p>
-<br>
-    <img src="img\z4758759309902_e1bfacc151d73aced5a32e76beecead0.jpg"style="height: 30px;width: 30px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">$865k</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >India</span></p>
-<p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: #77B788;">12.4% 
-  
-</p>
-<br>
-<img src="img\z4758762541426_8598ce7708fb3929fded5b0a20a87da9.jpg"style="height: 30px;width: 30px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">$745k</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Australia</span></p>
-<p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: red;">11.9% 
-  
-</p>
+          <img src="img\z4761717842377_9fce8f7727c50685ee37af4d2870fd99.jpg"
+            style="width:520px ;height: 75px;margin-top: 5px;">
 
         </div>
-        <div>
-            <div class="containerP">
-                <h1 style="color: black;font-size: 16px;margin-left:20px;margin-top: 15px;">Total Earning
-                    
-                
-                </h1>
-                <img src="img\z4758665980715_e7f308c7cdb96fbbbc21276409c2f62e.jpg"
-               style="margin-top: 15px;" >
-              </div>
-              <br>
-              <h1 style="color: black;margin-left:20px;margin-top:-25px;">87%<h6 style="margin-top: -25px;margin-left:120px;color: #77B788;">- 25.8%</h6></h1>
-       <img src="img\z4758839529038_3aa004f2cd406ac8ef0b26de0fe0f741.jpg" style="width: 360px;height: 220px;">
-       
-            </div>
-        <div>
-<h1 style="font-size: 18px;margin-top: 20px;margin-left: 25px;">Source Visits</h1>
-<h6  style="margin-top: 0px;margin-left: 25px;opacity: 0.5;">38.4k Visitor</h6>
-<img src="img\z4758257592871_746a8253da7f0b5c81427203302fc490.jpg"style="height: 40px;width: 40px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">Direct Source</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Direct link click</span></p>
-<p style="font-size: 16px;margin-left:270px;margin-top: -15px;">1.2k 
-   
-    <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
+        <input type="range" min="0" max="100" value="72"
+          style="width: 15%;margin-top:-20px;margin-left: 10px;height: 2px;">
+
+        <input type="range" min="0" max="100" value="45" id="percentage-input2"
+          style="width: 15%;margin-top:-30px;margin-left: 200px;height: 2px;">
+        <input type="range" min="0" max="100" value="82" id="percentage-input3"
+          style="width: 15%;margin-top:-40px;margin-left: 400px;height: 2px;">
+      </div>
+
+
+
+    </div>
+    <div style="width:550px ;height: 270px;">
+      <h1 style="font-size: 14px;margin-top: 10px;margin-left: 15px;">Support Tracker </h1>
+      <h6 style="margin-top: 0px;margin-left: 15px;opacity: 0.5;">Last 7 days</h6>
+      <h1 style="font-size: 22px;margin-top: -10px;margin-left: 15px;">164</h1>
+      <h6 style="margin-top: 10px;margin-left: 15px;opacity: 0.5;">Total Tickets</h6>
+
+      <img src="img\z4757670774371_37846ba15a00a151ec1440f903193dae.jpg"
+        style="height: 40px;width: 40px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">142 Tickets</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">New Tickets</span></p>
+
+      <img src="img\z4757724620241_0bf41f23f22af94782e7d6a09ddaa954.jpg"
+        style="height: 40px;width: 40px;margin-left:15px">
+      <p style="margin-left: 60px;margin-top: -40px;">28 Tickets</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"> <span class="opacity1">Open Tickets</span></p>
+
+
+
+      <img src="img\z4757725492995_46873b1e8cc7000a0b51e51dc7a711b2.jpg"
+        style="height: 40px;width: 40px;margin-left:15px">
+      <p style="margin-left: 60px;margin-top: -40px;">1 Day</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Response time</span></p>
+      <div style="margin-top: -140px;margin-left: 270px;">
+
+        <h1 style="font-size: 10px;margin-left: 5px;opacity: 0.5;">Completed Tasks</h1>
+        <h1 style="font-size: 20px;margin-left: 25px;">85%</h1>
+      </div>
+
+    </div>
+
+
+    <span class="chart-container"> <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+      <script style="margin-top: 50px;">
+        var xValues = ["Italy", "France", "Spain"];
+
+        var yValues = [142, 16, 6];
+
+        // var yValues = [40, 30, 30];
+        var barColors = [
+          "#7856FF",
+          "#D8D8E5",
+          "#ffff",
+
+        ];
+
+        new Chart("myChart", {
+          type: "doughnut",
+          data: {
+
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+
+        });
+      </script>
+    </span>
+
+  </div>
+
+
+
+
+  <div class="grid-container3">
+
+    <div>
+      <div class="containerP">
+        <h1 style="color: black;font-size: 13px;margin-left:20px;margin-top: 15px;">Sales by Countries
+
+
+        </h1>
+        <img src="img\z4758665980715_e7f308c7cdb96fbbbc21276409c2f62e.jpg" style="margin-top: 15px;">
+      </div>
+
+      <br>
+
+
+      <h2 style="color: black;font-size: 10px;margin-top: -20px;margin-left:20px;opacity: 0.6;">Total 28.5% Convention
+        Rate</h2>
+      <img src="img\z4758757854481_fdc74564e5d33a82885f7fd69b7c0897.jpg"
+        style="height: 30px;width: 30px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">$8,567k</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">United State</span></p>
+      <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: #77B788;">25.8%
+
+      </p>
+      <br>
+      <img src="img\z4758758538120_c7a99228dbeaf2d140e4a2ddca2aece3.jpg"
+        style="height: 30px;width: 30px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">$2,415k</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Brazil</span></p>
+      <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: red;">6.2%
+
+      </p>
+      <br>
+      <img src="img\z4758759309902_e1bfacc151d73aced5a32e76beecead0.jpg"
+        style="height: 30px;width: 30px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">$865k</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">India</span></p>
+      <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: #77B788;">12.4%
+
+      </p>
+      <br>
+      <img src="img\z4758762541426_8598ce7708fb3929fded5b0a20a87da9.jpg"
+        style="height: 30px;width: 30px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">$745k</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Australia</span></p>
+      <p style="font-size: 18px;margin-left:270px;margin-top: -15px;color: red;">11.9%
+
+      </p>
+
+    </div>
+    <div>
+      <div class="containerP">
+        <h1 style="color: black;font-size: 16px;margin-left:20px;margin-top: 15px;">Total Earning
+
+
+        </h1>
+        <img src="img\z4758665980715_e7f308c7cdb96fbbbc21276409c2f62e.jpg" style="margin-top: 15px;">
+      </div>
+      <br>
+      <h1 style="color: black;margin-left:20px;margin-top:-25px;">87%<h6
+          style="margin-top: -25px;margin-left:120px;color: #77B788;">- 25.8%</h6>
+      </h1>
+      <img src="img\z4758839529038_3aa004f2cd406ac8ef0b26de0fe0f741.jpg" style="width: 360px;height: 220px;">
+
+    </div>
+    <div>
+      <h1 style="font-size: 18px;margin-top: 20px;margin-left: 25px;">Source Visits</h1>
+      <h6 style="margin-top: 0px;margin-left: 25px;opacity: 0.5;">38.4k Visitor</h6>
+      <img src="img\z4758257592871_746a8253da7f0b5c81427203302fc490.jpg"
+        style="height: 40px;width: 40px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">Direct Source</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Direct link click</span></p>
+      <p style="font-size: 16px;margin-left:270px;margin-top: -15px;">1.2k
+
+      <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
     height: 15px;background-color:#CCDAD2 ;">
-  <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+4.25%</p>  </div>
-</p>
+        <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+4.25%</p>
+      </div>
+      </p>
 
 
-<img src="img\z4758270302293_c80f1d812b01de525d47b4808089a837.jpg"style="height: 45px;width: 40px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">Social Network</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Social Channels</span></p>
-<p style="font-size: 16px;margin-left:262px;margin-top: -15px;">31.5k
-    
+      <img src="img\z4758270302293_c80f1d812b01de525d47b4808089a837.jpg"
+        style="height: 45px;width: 40px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">Social Network</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Social Channels</span></p>
+      <p style="font-size: 16px;margin-left:262px;margin-top: -15px;">31.5k
 
-    <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
+
+      <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
     height: 15px;background-color:#CCDAD2 ;">
-  <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+8.25%</p>  </div>
+        <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+8.25%</p>
+      </div>
 
-<img src="img\z4758271254160_df3a52b9a79d8b21d7c22655c61e7b97.jpg"style="height: 40px;width: 40px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">Email Newsletter</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Mail Campaigns</span></p>
-<p style="font-size: 16px;margin-left:275px;margin-top: -15px;">893
-    
-    <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
+      <img src="img\z4758271254160_df3a52b9a79d8b21d7c22655c61e7b97.jpg"
+        style="height: 40px;width: 40px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">Email Newsletter</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Mail Campaigns</span></p>
+      <p style="font-size: 16px;margin-left:275px;margin-top: -15px;">893
+
+      <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
     height: 15px;background-color:#CCDAD2 ;">
-  <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+2.45%</p>  </div>
-    
-<img src="img\z4758272182076_448d28db7fe04f3cec883dde3daebd38.jpg"style="height: 40px;width: 40px;margin-left:15px;"><p style="margin-left: 60px;margin-top: -40px;">Referrals</p>                            
-</p>
-<p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1" >Impact Radius Visít</span></p>
-<p style="font-size: 16px;margin-left:275px;margin-top: -25px;">342
-  
-    <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
+        <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+2.45%</p>
+      </div>
+
+      <img src="img\z4758272182076_448d28db7fe04f3cec883dde3daebd38.jpg"
+        style="height: 40px;width: 40px;margin-left:15px;">
+      <p style="margin-left: 60px;margin-top: -40px;">Referrals</p>
+      </p>
+      <p style="margin-top: -5px;margin-left: 62px;"><span class="opacity1">Impact Radius Visít</span></p>
+      <p style="font-size: 16px;margin-left:275px;margin-top: -25px;">342
+
+      <div style="margin-top: -15px;margin-left:310px;color: #77B788;border-radius: 10%;width: 35px;
     height: 15px;background-color:#CCDAD2 ;">
-  <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+9.15%</p>  </div>       
+        <p style="margin-left: -0.5px;font-size: 10px;margin-top: -5px;">+9.15%</p>
+      </div>
 
-</div>
-        </div>
+    </div>
+  </div>
 
-        </div>
-        </div>
+  </div>
+  </div>
 
+
+  </div>
+  <div class="vertical-line"></div>
+
+
+  <!-- <div class="grid-container5">
+
+    <div class="sidenav" style="margin-left: 240px;height:580px ;width: 40px;">
+
+      <button class="dropdown-btn" style="margin-top: -30px;" onclick="myFunction()">
+
+        <img src="img\z4769742522227_1ae5fe30e2271c17b630d3c76c0646a8.jpg" style="width: 30px;height: 30px;margin-top: 10px;margin-left: -20px;">
+        <img src="img\z4772785173977_b4336e964bea32839c56d657016da7b7.jpg" style="height:400px ;width: 12px;margin-right: 30px;">
         
-    </div>
-    <div class="vertical-line"></div>
-    <div class="grid-container4">
-        <div>
-            <img src="img\z4755827589208_9e599fdafc66e5f753624df767b84bf5.jpg" style="height: 30px;width: 30px;">
-            <br>
-            <img src="img\z4755833389412_4c8409bb37540fdb8e226bd8bd8751f3.jpg" alt="">
-            <br>
-            <img src="img\z4755844200987_e74a2de4ef5fe38dcb2faed2b64c890c.jpg" alt="">
-            <br>
-            <img src="img\z4755850713740_e5ac6abfe8864299a8a7dfd64b440eaf.jpg" alt="">
-            <br>
-            <img src="img\z4755853168557_6f072e01c5218e6b5a738e4b1c879adf.jpg" style="margin-bottom:-200px;">
-        </div>
+        <i class="fa fa-caret-left"></i>
+      </button>
 
-    </div>
-    <div class="grid-container5">
-        <div>
-            <!-- <img src="img\z4755903025785_2c816d5458beef10d37b41c22791d075.jpg" style="height: 590px;width: 120px;"> -->
-            <img src="img\z4755827589208_9e599fdafc66e5f753624df767b84bf5.jpg" style="margin-right: 80px;">
-       <h1 style="font-size: 16px;margin-top:-40px;color:#7553F9;margin-left: 45px;">Taurus
-        <img src="img\z4767386980482_e846130baeab2b6f7f7192ced64a03d0.jpg" style="width: 20px;height: 20px;margin-left: 10px;margin-top: -10px;">  
-    
-    </h1>
-       <h6 style="opacity: 0.5;font-size: 8px;margin-top: 0px;margin-left: 25px;">SMART SYSTEM
-    
-    </h6>
-    <img src="img\z4767440151576_53945265e7d189c6f3ec6c695b4d2ef0.jpg" style="height: 540px;width:120px ;">
-    
-    </div>
 
+
+
+
+
+
+      
+       
+      </div>
+    
+    <div class="dropdown-container" id="test1">
+      <img src="img\z4769742522227_1ae5fe30e2271c17b630d3c76c0646a8.jpg" style="width: 80px;height: 80px;">
+      <div style="background-color: #6141E4;color: #FFF;"> <a href="#" style="font-size: 14px;color: #fff;text-decoration: none;"> <img
+            src="img\z4769871843978_26eb8275aa53d88d08c568e98c49c8fd (1).jpg" style="height:20px ;width:20px ;">
+          Dashboard</a></div>
+
+      <a href="#"></a>
+      <div>
+        <button class="dropdown-btn" style="font-size:8px;">
+          <img src="img\z4769923430358_91df0c55ff71e32e4a98f2a8b71991d1.jpg"
+            style="height: 20px;width: 20px;margin-right: 0px;color: black;">
+          Bank Profile
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <a href="#" style="font-size: 14px;color: black;opacity: 0.5;text-decoration: none;">Bank Information
+          <br>
+          Bank Products
+        </a>
+
+
+      </div>
+      <div>
+        <button class="dropdown-btn" style="font-size: 8px;">
+
+          <img src="img\z4769929224861_97fad1d52d379d05edf076fcb7ae83f9.jpg"
+            style="height: 20px;width: 20px;margin-right: 0px;color: black;"> Order
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <a href="#" style="font-size: 14px;color: black;opacity: 0.5;text-decoration: none;">
+          Order Management
+          <br>
+          Order Setting
+        </a>
+
+
+      </div>
+
+      <div>
+        <button class="dropdown-btn" style="font-size: 6px;">
+
+          <img src="img\z4769956203228_c7f7abe6d9dee6f7fcce2cb88ce457c8.jpg"
+            style="height: 20px;width: 20px;margin-right: 0px;color: black;"> Inventory Management
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <a href="#" style="font-size: 14px;color: black;opacity: 0.5;text-decoration: none;">
+          Credit Cards
+          <br>
+          Cars Inventory
+          <br>
+          Property Inventory
+        </a>
+
+
+      </div>
+
+
+      <div>
+        <button class="dropdown-btn" style="font-size: 8px;">
+
+          <img src="img\z4769960817184_329c6188e9f52da63e6811131b7b3191.jpg"
+            style="height: 20px;width: 20px;margin-right: 0px;color: black;"> Rule Management
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <a href="#" style="font-size: 14px;color: black;opacity: 0.5;text-decoration: none;">
+          Decision Rule
+          <br>
+          Risk Grading
+          <br>
+          Scoring
+          <br>
+          Decision Flow
+        </a>
+
+
+      </div>
+
+
+      <div>
+        <button class="dropdown-btn" style="font-size: 8px;">
+          <img src="img\z4769964373547_3b2ca76149df4fee889315ad5ec178e8.jpg"
+            style="height: 20px;width: 20px;margin-right: 0px;color: black;">
+          Admin
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <a href="#" style="font-size: 14px;color: black;opacity: 0.5;text-decoration: none;">
+          Credit Cards
+          <br>
+          Cars Inventory
+          <br>
+          Property Inventory
+        </a>
+
+
+      </div>
+
+
+      <div>
+        <button class="dropdown-btn" style="font-size: 8px;">
+          <img src="img\z4769971170505_d4675d61764e12973924d60468e47fea.jpg" style="height: 20px;width: 20px;color: black;">
+          Reports
+          <i class="fa fa-caret-up"></i>
+        </button>
+        <img src="img\z4769765248163_3ea6a01c6b17056e9401cd3dce2bd0ce.jpg"
+          style="height: 50px;width: 50px;margin-top: 190px;">
+
+      </div>
+      <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      </script>
     </div>
+</div> -->
+
+<div class="container">
+  <div class="sidebar">
+      <div class="sidebartop">
+         
+         
+          <div class="menu">
+              <!-- <i class="bi bi-list"style="background-color:black;"></i> -->
+              
+
+              <li><a href="#"><img src="z4788719752295_354456a206268fc25d8f85c3f9675956.jpg"><span class="text" style="color: black;"></span></a></li>
+          </div>
+      </div>
+      
+      <nav>
+          <ul>
+              <!-- <li><a href="#"><i class="bi bi-speedometer" style="background-color:black;"></i><span class="text" style="color: black;">Dashboard</span></a></li> -->
+              
+              
+              <li><a href="#"><img src="z4788714299020_57920b57fad1627bf3a485fdfe2d4bcc.jpg"><span class="text" style="color: black;">Dashboard</span></a></li>
+
+              <!-- <li><a href="#"><i class="bi bi-file-earmark"style="background-color:black;"></i><span class="text" style="color: black;">Order</span></a></li> -->
+              
+              <li><a href="#"><img src="z4788701523328_fbbc5a69307934fb080aa7ed10bd6743.jpg"><span class="text" style="color: black;">Bank Profile</span></a></li>
+ 
+             </span></a></li>
+              <li><a href="#"><img src="z4788729720399_2da748609fcaff2c5df2d837217ec69c.jpg"><span class="text"style="color: black;">Inventory Management</span></a></li>
+              <li><a href="#"><img src="z4788736149159_c8cdbee66f2be3dd7143d90325d43166.jpg"><span class="text"style="color: black;">Rule Management</span></a></li>
+              <li><a href="#"><img src="z4788738988954_744bce68227fd2d89a1e8000b27eb3e3.jpg"><span class="text"style="color: black;">Admin</span></a></li>
+
+              
+              <li><a href="#"><img src="z4788742925411_4e233c9a724fc5648952145100b84444.jpg"><span class="text"style="color: black;width:20px ;height:20px;">Reports</span></a></li>
+          
+            </ul>
+            <br>
+<br>
+<br>
+<br>
+<img src="img\z4769765248163_3ea6a01c6b17056e9401cd3dce2bd0ce.jpg" >
+    
+      </nav>
+     
+  </div>
+  
+</div>
+
+<script src="init.js"></script>
+
 </body>
 
 </html>
